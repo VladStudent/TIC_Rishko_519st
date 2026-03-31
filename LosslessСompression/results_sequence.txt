@@ -1,0 +1,72 @@
+
+Sequence 1:
+0000000010010000000000000100000001100000000000000000000000010000000000000000000000000000001000000000
+Alphabet size: 2
+Size (bytes): 100
+Probabilities: 0=0.9300, 1=0.0700
+Entropy: 0.3659
+Excess: 0.6341
+Type: нерівна
+
+Sequence 2:
+Rishko0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Alphabet size: 7
+Size (bytes): 100
+Probabilities: R=0.0100, i=0.0100, s=0.0100, h=0.0100, k=0.0100, o=0.0100, 0=0.9400
+Entropy: 0.4825
+Excess: 0.8281
+Type: нерівна
+
+Sequence 3:
+0000000000000000000000000000i000000000o0000000000k0000000000000s0h0000000000000000000000R00000000000
+Alphabet size: 7
+Size (bytes): 100
+Probabilities: 0=0.9400, i=0.0100, o=0.0100, k=0.0100, s=0.0100, h=0.0100, R=0.0100
+Entropy: 0.4825
+Excess: 0.8281
+Type: нерівна
+
+Sequence 4:
+Rishko519stRishko519stRishko519stRishko519stRishko519stRishko519stRishko519stRishko519stRishko519stR
+Alphabet size: 10
+Size (bytes): 100
+Probabilities: R=0.1000, i=0.0900, s=0.1800, h=0.0900, k=0.0900, o=0.0900, 5=0.0900, 1=0.0900, 9=0.0900, t=0.0900
+Entropy: 3.2787
+Excess: 0.0130
+Type: нерівна
+
+Sequence 5:
+9R19ttR1tRRt1R59191iR5s9R5ttsi9tt1i59959R19Rs9ii195s9i115199t1959i5iRR55ttiit1Rii1i9iiRRst1Rst9Ris1s
+Alphabet size: 7
+Size (bytes): 100
+Probabilities: 9=0.1900, R=0.1600, 1=0.1600, t=0.1400, 5=0.1100, i=0.1600, s=0.0800
+Entropy: 2.7632
+Excess: 0.0157
+Type: нерівна
+
+Sequence 6:
+iiRiRiiRiisiRii1RRRRitR5tRiRis1RiiRR59R99RiiRR9iR1t5isi9iii1iRRRt5iiii95iRsitiRRRR9iiisRRRRis1RR9iit
+Alphabet size: 7
+Size (bytes): 100
+Probabilities: i=0.3700, R=0.3300, s=0.0600, 1=0.0500, t=0.0600, 5=0.0500, 9=0.0800
+Entropy: 2.2693
+Excess: 0.1917
+Type: нерівна
+
+Sequence 7:
+7b7olpnfg3gmxpx1plfxj1wszo35g1jxn2ejruogmgb26moxvmji5lfmqc6pkz7sehwrigjxtbhv1lz0z3p2amjk0j2iuf1fs2l3
+Alphabet size: 31
+Size (bytes): 100
+Probabilities: 7=0.0300, b=0.0300, o=0.0400, l=0.0500, p=0.0500, n=0.0200, f=0.0500, g=0.0600, 3=0.0400, m=0.0600, x=0.0600, 1=0.0500, j=0.0700, w=0.0200, s=0.0300, z=0.0400, 5=0.0200, 2=0.0500, e=0.0200, r=0.0200, u=0.0200, 6=0.0200, v=0.0200, i=0.0300, q=0.0100, c=0.0100, k=0.0200, h=0.0200, t=0.0100, 0=0.0200, a=0.0100
+Entropy: 4.7514
+Excess: 0.0409
+Type: нерівна
+
+Sequence 8:
+1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+Alphabet size: 1
+Size (bytes): 100
+Probabilities: 1=1.0000
+Entropy: -0.0000
+Excess: 1.0000
+Type: рівна
