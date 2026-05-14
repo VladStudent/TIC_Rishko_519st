@@ -181,16 +181,16 @@ if __name__ == "__main__":
 
     images = [
         (
-            os.path.join(base_path, "images", "low.jpg"),
-            os.path.join(base_path, "low_compressed.jpg")
+            os.path.join(base_path, "Results/images", "low.jpg"),
+            os.path.join(base_path, "Results/low_compressed.jpg")
         ),
         (
-            os.path.join(base_path, "images", "middle.jpg"),
-            os.path.join(base_path, "middle_compressed.jpg")
+            os.path.join(base_path, "Results/images", "middle.jpg"),
+            os.path.join(base_path, "Results/middle_compressed.jpg")
         ),
         (
-            os.path.join(base_path, "images", "high.jpg"),
-            os.path.join(base_path, "high_compressed.jpg")
+            os.path.join(base_path, "Results/images", "high.jpg"),
+            os.path.join(base_path, "Results/high_compressed.jpg")
         )
     ]
 
