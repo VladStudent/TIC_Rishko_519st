@@ -7,6 +7,7 @@ open("results_AC_CH.txt", "w").close()
 
 results = []
 
+
 def float_bin(point, size_cod):
 
     binary_code = ""
@@ -27,6 +28,7 @@ def float_bin(point, size_cod):
             break
 
     return binary_code
+
 
 def encode_ac(uniq_chars, probabilitys, alphabet_size, sequence):
 
@@ -78,11 +80,16 @@ def encode_ac(uniq_chars, probabilitys, alphabet_size, sequence):
 
     point = (low + high) / 2
 
-    size_cod = math.ceil(math.log((1 / (high - low)), 2) + 1)
+    diff_interval = high - low
 
+    if diff_interval <= 0:
+        diff_interval = 1e-15
+
+    size_cod = math.ceil(math.log((1 / diff_interval), 2) + 1)
     bin_code = float_bin(point, size_cod)
 
     return [point, alphabet_size, alphabet, probability], bin_code
+
 
 def decode_ac(encoded_data_ac, length_seq):
 
@@ -128,6 +135,7 @@ def decode_ac(encoded_data_ac, length_seq):
                 break
 
     return decoded_sequence
+
 
 def encode_ch(uniq_chars, probabilitys, sequence):
 
@@ -216,6 +224,7 @@ def encode_ch(uniq_chars, probabilitys, sequence):
 
     return [encode, symbol_code], encode
 
+
 def decode_ch(encoded_sequence):
 
     encode = list(encoded_sequence[0])
@@ -257,14 +266,13 @@ def decode_ch(encoded_sequence):
 
     return sequence
 
+
 def main():
 
     with open("sequence.txt", "r") as file:
         original_sequences = ast.literal_eval(file.read())
 
-    for sequence in original_sequences:
-
-        sequence = sequence[:10]
+    for index, sequence in enumerate(original_sequences, start=1):
 
         sequence_length = len(sequence)
 
@@ -308,21 +316,35 @@ def main():
 
         bps_ch = len(encoded_sequence_ch) / sequence_length
 
-        with open("results_AC_CH.txt", "a") as file:
+        with open("results_AC_CH.txt", "a", encoding="utf-8") as file:
 
-            file.write(f"\nSequence: {sequence}\n")
+            file.write(f"\n========== Sequence {index} ==========\n")
 
-            file.write(f"Entropy: {entropy}\n")
+            file.write(f"\nOriginal sequence:\n{sequence}\n")
 
-            file.write(f"\nAC encoded: {encoded_sequence_ac}\n")
-            file.write(f"AC decoded: {decoded_sequence_ac}\n")
-            file.write(f"bps AC: {bps_ac}\n")
+            file.write(f"\nSequence length: {sequence_length}\n")
 
-            file.write(f"\nCH encoded: {encoded_sequence_ch}\n")
-            file.write(f"CH decoded: {decoded_sequence_ch}\n")
-            file.write(f"bps CH: {bps_ch}\n")
+            file.write(f"\nAlphabet size: {sequence_alphabet_size}\n")
 
-            file.write("\n" + "-" * 50 + "\n")
+            file.write(f"\nEntropy: {round(entropy, 4)}\n")
+
+            file.write(f"\n--- Arithmetic Coding ---\n")
+
+            file.write(f"Encoded AC:\n{encoded_sequence_ac}\n")
+
+            file.write(f"\nDecoded AC:\n{decoded_sequence_ac}\n")
+
+            file.write(f"\nBits per symbol AC: {round(bps_ac, 4)}\n")
+
+            file.write(f"\n--- Huffman Coding ---\n")
+
+            file.write(f"Encoded CH:\n{encoded_sequence_ch}\n")
+
+            file.write(f"\nDecoded CH:\n{decoded_sequence_ch}\n")
+
+            file.write(f"\nBits per symbol CH: {round(bps_ch, 4)}\n")
+
+            file.write("\n" + "=" * 60 + "\n")
 
         results.append([
             round(entropy, 2),
@@ -338,7 +360,7 @@ def main():
     headers = ['Entropy', 'bps AC', 'bps CH']
 
     rows = [
-        f'Sequence {i+1}'
+        f'Sequence {i + 1}'
         for i in range(len(results))
     ]
 
@@ -348,6 +370,10 @@ def main():
         colLabels=headers,
         loc='center'
     )
+
+    table.auto_set_font_size(False)
+    table.set_fontsize(10)
+    table.scale(1.2, 1.5)
 
     plt.show()
 
