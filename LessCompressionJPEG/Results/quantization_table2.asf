@@ -1,0 +1,10 @@
+# ASF Multimedia / Quantization Configuration File - Table 2 (Low Compression)
+[JPEG_QUANTIZATION_MATRIX_8X8]
+5 3 3 5 7 12 15 18
+3 3 4 5 7 16 16 15
+4 3 4 5 10 16 20 16
+4 4 5 7 12 21 19 15
+5 5 9 14 17 27 25 19
+7 10 13 16 20 26 29 24
+15 19 23 26 31 36 35 30
+22 28 29 30 34 30 31 30
